@@ -1,0 +1,17 @@
+namespace PJATK_APBD_Cw7_s34264.Models;
+
+public class Component
+{
+    public string Code { get; set; } = null!;
+
+    public string Name { get; set; } = null!;
+    public string Description { get; set; } = null!;
+    
+    public int ComponentManufacturersId { get; set; }
+    public virtual ComponentManufacturer ComponentManufacturer { get; set; } = null!;
+    
+    public int ComponentTypesId { get; set; }
+    public virtual ComponentType ComponentType { get; set; } = null!;
+    
+    public virtual ICollection<PCComponent> PCComponents { get; set; } = [];
+}
